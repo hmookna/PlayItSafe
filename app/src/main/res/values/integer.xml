@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="MAP_ZOOM">19</integer>
+    <integer name="MAP_BEARING">270</integer>
+    <integer name="MAP_TILT">70</integer>
+
+    <integer name="MAP_CIRCLERAD">50</integer>
+    <integer name="MAP_STROKECOL">0xffff0000</integer>
+    <integer name="MAP_SHADECOL">0x44ff0000</integer>
+
+</resources>
+

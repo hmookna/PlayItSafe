@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.playitsafe.SafeZone.SafeZoneActivity"
+    android:background="#ff171619"
+    android:orientation="vertical">
+    <!--  Header  Starts-->
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+    <!--  Header Ends -->
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e8ffe6">
+
+        <!-- Footer Start -->
+        <LinearLayout android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="159dp"
+            android:background="@layout/safezone_footer_repeat"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+        </LinearLayout>
+        <!-- Footer Ends -->
+
+    <LinearLayout
+        android:id="@+id/container_safeazonecontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="UNSAFE ZONE"
+            android:id="@+id/text_main_instruction"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal" />
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/routeListView"
+            android:layout_below="@+id/text_main_instruction"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            
+            android:listSelector="@drawable/safezone_list_selector"/>
+
+
+    </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
+</LinearLayout>

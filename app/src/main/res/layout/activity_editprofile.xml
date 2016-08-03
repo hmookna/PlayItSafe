@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#A0E6F7">
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_close"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#A0E6F7">
+
+        <com.example.playitsafe.Bodyguard.RoundedImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/profilepic"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:maxWidth="100dp"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="EDIT PROFILE"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView9" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f0f0f0"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/lbl_name"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/lbl_email"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColor="@color/input_login"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/lbl_password"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textColor="@color/input_login"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/inputMobile"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/lbl_mobile"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="5dp"
+                android:textColor="@color/input_login"
+                android:textCursorDrawable="@null"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@color/input_login"
+                android:text="Edit"
+                android:textColor="@color/input_login_hint"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

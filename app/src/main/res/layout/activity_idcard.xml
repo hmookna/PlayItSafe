@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="60dp"
+    tools:context="com.example.playitsafe.LoginRegister.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_idcard"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/img_idcard" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/msg_idcard"
+            android:textColor="@color/input_login"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/msg_sec_idcard"
+            android:textColor="@color/input_login"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/inputIDcardnum"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:hint="@string/lbl_enter_idcard"
+            android:inputType="number"
+            android:maxLength="13"
+            android:padding="10dp"
+            android:textCursorDrawable="@null"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_verify_idcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@color/input_login"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/lbl_submit"
+            android:textColor="@color/input_login_hint"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

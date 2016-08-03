@@ -1,0 +1,219 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+               android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fakeFriend"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fakeCamera"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/fakeFriend" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fakeNav"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container_body"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+        </FrameLayout>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                tools:context=".MainActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_weight="67.93">
+
+                <Button
+                    android:id="@+id/fakeMap"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:background="#359c5e"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="#ffffff" />
+
+                </fragment>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="174dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Image Saved"
+                    android:visibility="gone"
+                    android:id="@+id/textView2"
+                    android:background="#00090909"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/linearLayout2"
+                        android:layout_alignParentEnd="true">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="      Emergency\n           Call  "
+                            android:id="@+id/emergency"
+                            android:background="#FFD139"
+                            android:gravity="left|center_vertical"
+                            android:layout_alignTop="@+id/guardian"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignBottom="@+id/guardian"
+                            android:layout_alignStart="@+id/fakecall" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#9B7700"
+                            android:textColor="@color/white"
+                            android:layout_weight="1.0"
+                            android:gravity="right|center_vertical"
+                            android:text="FAKE CALL         "
+                            android:id="@+id/fakecall"
+                            android:layout_above="@+id/emergency"
+                            android:layout_alignParentEnd="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignBottom="@+id/btnSOS"
+                        android:layout_alignParentEnd="true">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="       Safe Zone"
+                            android:id="@+id/safezone"
+                            android:gravity="left|center_vertical"
+                            android:layout_below="@+id/textView2"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/btnSOS"
+                            android:background="#9B7700"
+                            android:textColor="@color/white"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:text="guardian          "
+                            android:id="@+id/guardian"
+                            android:gravity="right|center_vertical"
+                            android:layout_below="@+id/safezone"
+                            android:layout_alignBottom="@+id/emailver"
+                            android:layout_alignParentStart="true"
+                            android:background="#FFD139" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSOS"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/btn_sos"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/emailver"
+                    android:id="@+id/emailver"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="com.example.playitsafe.Design.FragmentDrawer"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
+
